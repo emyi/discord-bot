@@ -6,7 +6,7 @@ client.on('ready', () => {
 	console.log(`Logged in as ${client.user.tag}!`);
 });
 //Create Group Class
- class Group {
+class Group {
  	constructor( groupCreator, healers, tanks, dps, groupPurpose ) {
  		this.groupCreator = groupCreator;
  		this.healers = healers;
@@ -27,7 +27,7 @@ client.on('message', msg => {
 	if( msg.content.split( '-' )[0] == 'createGroup' ) {
 		//Checks if number inputs are numbers
 		if( !isNaN( healers ) && !isNaN( tanks ) && !isNaN( dps ) ) {
-			let gr = new Group( user, healers, tanks, dps, purpose );
+			let gr = new Group( 'Eric', healers, tanks, dps, purpose );
 			msg.reply( gr.say() );
 		}
 	}
