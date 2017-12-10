@@ -1,0 +1,15 @@
+{
+  "name": "discord-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eric Yi",
+  "license": "ISC",
+  "dependencies": {
+    "discord.io": "^2.5.3",
+    "dotenv": "^4.0.0"
+  }
+}
