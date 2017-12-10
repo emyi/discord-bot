@@ -15,7 +15,7 @@ class Group {
  		this.groupPurpose = groupPurpose;
  	}
  	say() {
- 		console.log( this.groupCreator + " is looking for " + this.healers + " healers, " + this.tanks + " tanks, " + this.dps + " dps for " + this.groupPurpose );
+ 		return this.groupCreator + " is looking for " + this.healers + " healers, " + this.tanks + " tanks, " + this.dps + " dps for " + this.groupPurpose;
  	}
  }
 client.on('message', msg => {
