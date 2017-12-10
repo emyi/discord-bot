@@ -9,7 +9,7 @@
   "author": "Eric Yi",
   "license": "ISC",
   "dependencies": {
-    "discord.io": "^2.5.3",
+    "discord.js": "^11.2.1",
     "dotenv": "^4.0.0"
   }
 }
