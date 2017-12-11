@@ -27,7 +27,7 @@ client.on('message', msg => {
 	if( msg.content.split( '-' )[0] == 'createGroup' ) {
 		//Checks if number inputs are numbers
 		if( !isNaN( healers ) && !isNaN( tanks ) && !isNaN( dps ) ) {
-			let gr = new Group( 'Eric', healers, tanks, dps, purpose );
+			let gr = new Group( msg.author, healers, tanks, dps, purpose );
 			msg.reply( gr.say() );
 		}
 	}
