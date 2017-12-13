@@ -1,6 +1,10 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const config = require("./config.js");
+const express = require('express');
+const app = express();
+// API file for interacting with MongoDB
+const api = require('./server/routes/api');
 
 client.on('ready', () => {
 	console.log(`Logged in as ${client.user.tag}!`);
@@ -17,7 +21,7 @@ class Group {
  	say() {
  		return this.groupCreator + " is looking for " + this.healers + " healers, " + this.tanks + " tanks, " + this.dps + " dps for " + this.groupPurpose;
  	}
- }
+}
 client.on('message', msg => {
 	let healers = msg.content.split( '-' )[1];
 	let tanks = msg.content.split( '-' )[2];
